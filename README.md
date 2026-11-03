@@ -32,6 +32,8 @@ The product and system story behind an unpublished, source-grounded AI study
 Bible I designed, managed, and built. The public repository documents the mobile
 and web experience, grounded chat, virtual clips, retrieval architecture, and
 agentic content workflows without exposing customer code or production secrets.
+An October 2026 pipeline snapshot contained 11,405 source-linked clips from 3,504
+videos; this is system output, not an adoption claim.
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
