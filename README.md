@@ -26,6 +26,13 @@ experiments to valuable, usable systems without removing human judgment.
 
 ## Selected work
 
+### [AI Bible Study App — Product & System Case Study](https://github.com/oratioandco/ai-bible-study-case-study)
+
+The product and system story behind an unpublished, source-grounded AI study
+Bible I designed, managed, and built. The public repository documents the mobile
+and web experience, grounded chat, virtual clips, retrieval architecture, and
+agentic content workflows without exposing customer code or production secrets.
+
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
 A 3D geospatial planning tool for extreme-telephoto photography. It combines real
