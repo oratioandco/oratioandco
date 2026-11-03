@@ -33,7 +33,10 @@
       .frame { display: none; overflow: hidden; }
       html[data-frame="profile"] #profile,
       html[data-frame="work"] #work,
-      html[data-frame="vsb"] #vsb { display: block; }
+      html[data-frame="vsb"] #vsb,
+      html[data-frame="systems"] #systems,
+      html[data-frame="selah"] #selah,
+      html[data-frame="aperto"] #aperto { display: block; }
       .mono {
         font-family: "Departure Mono", monospace;
         text-transform: uppercase;
@@ -287,23 +290,38 @@
       #vsb .proof div { padding-top: 17px; }
       #vsb .proof strong { display: block; color: var(--signal); font-size: 31px; }
       #vsb .proof span { color: rgba(255,253,247,.58); font-size: 13px; }
-      #vsb .device {
+      #vsb .device-main {
         position: absolute;
         z-index: 2;
-        top: 47px;
-        right: 53px;
-        width: 615px;
-        height: 526px;
-        padding: 15px;
-        background: var(--paper);
-        box-shadow: -20px 24px 0 var(--signal);
-        transform: rotate(1.2deg);
+        top: -84px;
+        right: 322px;
+        width: 304px;
+        height: 676px;
+        overflow: hidden;
+        border: 9px solid var(--paper);
+        border-radius: 44px;
+        box-shadow: -18px 22px 0 var(--signal);
+        transform: rotate(-2deg);
       }
-      #vsb .device img {
+      #vsb .device-main img,
+      #vsb .device-side img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: top center;
+      }
+      #vsb .device-side {
+        position: absolute;
+        z-index: 2;
+        top: 40px;
+        right: 46px;
+        width: 296px;
+        height: 642px;
+        overflow: hidden;
+        border: 9px solid var(--paper);
+        border-radius: 44px;
+        box-shadow: 0 28px 54px rgba(0,0,0,.42);
+        transform: rotate(3deg);
       }
       #vsb .status {
         position: absolute;
@@ -315,6 +333,136 @@
         background: var(--acid);
         font-size: 12px;
       }
+
+      .product-frame {
+        width: 1400px;
+        height: 760px;
+        position: relative;
+        overflow: hidden;
+        color: var(--ink);
+        background: var(--paper);
+      }
+      .product-frame .frame-label {
+        position: absolute;
+        z-index: 5;
+        top: 28px;
+        left: 36px;
+        padding: 10px 12px;
+        color: var(--white);
+        background: var(--ink);
+        font-size: 12px;
+      }
+      .product-frame .frame-title {
+        position: absolute;
+        z-index: 5;
+        left: 42px;
+        bottom: 35px;
+        margin: 0;
+        max-width: 790px;
+        font-family: Gambarino, Georgia, serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: .95;
+        letter-spacing: -.04em;
+      }
+
+      #systems {
+        padding: 26px;
+        background: var(--ink);
+      }
+      #systems .systems-grid {
+        height: 708px;
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 14px;
+      }
+      #systems figure {
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+        background: var(--white);
+      }
+      #systems figure:first-child { grid-row: 1 / 4; }
+      #systems img { width: 100%; height: 100%; object-fit: cover; }
+      #systems figure:first-child img { object-position: center 37%; }
+      #systems figure:nth-child(2) img { object-position: center; }
+      #systems figure:nth-child(3) img { object-position: center top; }
+      #systems figure:nth-child(4) img { object-position: left center; }
+      #systems figcaption {
+        position: absolute;
+        left: 16px;
+        bottom: 15px;
+        padding: 8px 10px;
+        color: var(--ink);
+        background: var(--acid);
+        font-size: 12px;
+      }
+      #systems .frame-label { color: var(--ink); background: var(--signal); }
+
+      #selah { background: #ede8df; }
+      #selah .shot {
+        position: absolute;
+        top: 38px;
+        right: 38px;
+        width: 870px;
+        height: 610px;
+        padding: 13px;
+        background: var(--white);
+        box-shadow: -20px 22px 0 var(--signal);
+        transform: rotate(.75deg);
+      }
+      #selah .shot img { width: 100%; height: 100%; object-fit: cover; }
+      #selah .frame-title { max-width: 470px; }
+      #selah .note {
+        position: absolute;
+        left: 44px;
+        top: 260px;
+        width: 355px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      #aperto { color: var(--white); background: #14294a; }
+      #aperto::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 74% 28%, rgba(255,97,56,.34), transparent 30%),
+          linear-gradient(135deg, rgba(255,255,255,.07), transparent 50%);
+      }
+      #aperto .phones {
+        position: absolute;
+        top: -54px;
+        right: 95px;
+        width: 610px;
+        height: 900px;
+        display: flex;
+        gap: 25px;
+        transform: rotate(3deg);
+      }
+      #aperto .phones img {
+        width: 292px;
+        height: 634px;
+        object-fit: cover;
+        border: 8px solid rgba(255,253,247,.92);
+        border-radius: 42px;
+        box-shadow: 0 30px 60px rgba(0,0,0,.38);
+      }
+      #aperto .phones img:nth-child(2) { margin-top: 94px; }
+      #aperto .frame-title { max-width: 580px; color: var(--white); }
+      #aperto .note {
+        position: absolute;
+        left: 44px;
+        top: 245px;
+        width: 480px;
+        color: rgba(255,253,247,.72);
+        font-size: 20px;
+        line-height: 1.42;
+      }
+      #aperto .frame-label { color: var(--ink); background: var(--acid); }
     </style>
     <script>
       document.documentElement.dataset.frame = new URLSearchParams(location.search).get("frame") || "profile";
@@ -376,7 +524,7 @@
     <section class="frame" id="vsb">
       <div class="rule"></div>
       <div class="copy">
-        <div class="eyebrow mono">AI product & system case study</div>
+        <div class="eyebrow mono">Bibel TV · AI product & system case study</div>
         <h1>A study Bible built around source-linked video.</h1>
         <p class="sub">Passage-centered reading, grounded conversation, and an active content pipeline shaped as one product.</p>
         <div class="proof">
@@ -384,8 +532,48 @@
           <div><strong>3,504</strong><span>videos · October 2026</span></div>
         </div>
       </div>
-      <div class="device"><img src="source/vsb-sermon-clips.jpg" alt="" /></div>
-      <div class="status mono">Unpublished product · verified system output</div>
+      <div class="device-main"><img src="source/vsb-android-reader.jpg" alt="" /></div>
+      <div class="device-side"><img src="source/vsb-ios-chat.jpg" alt="" /></div>
+      <div class="status mono">Dark-mode reading · grounded conversation</div>
+    </section>
+
+    <section class="frame product-frame" id="systems">
+      <span class="frame-label mono">Bibel TV · product infrastructure</span>
+      <div class="systems-grid">
+        <figure>
+          <img src="source/bibeltv-color-system.png" alt="" />
+          <figcaption class="mono">Color API · context-aware themes</figcaption>
+        </figure>
+        <figure>
+          <img src="source/bibeltv-token-api.png" alt="" />
+          <figcaption class="mono">Token API · five product surfaces</figcaption>
+        </figure>
+        <figure>
+          <img src="source/bibeltv-storybook.png" alt="" />
+          <figcaption class="mono">Storybook · LLM-safe components</figcaption>
+        </figure>
+        <figure>
+          <img src="source/bibeltv-ci-check.png" alt="" />
+          <figcaption class="mono">CI · checks that refuse drift</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="frame product-frame" id="selah">
+      <span class="frame-label mono">Shipped product · macOS</span>
+      <p class="note">A quiet menu-bar companion for moving from one meeting to the next with more intention.</p>
+      <h2 class="frame-title">Selah turns calendar transitions into mindful pauses.</h2>
+      <div class="shot"><img src="source/selah.png" alt="" /></div>
+    </section>
+
+    <section class="frame product-frame" id="aperto">
+      <span class="frame-label mono">In development · iOS & Android</span>
+      <p class="note">An audio-first spiritual formation companion built around calm daily practices, honest boundaries, and human support.</p>
+      <h2 class="frame-title">Aperto makes room for a meaningful daily rhythm.</h2>
+      <div class="phones">
+        <img src="source/aperto-night.jpg" alt="" />
+        <img src="source/aperto-scenes.jpg" alt="" />
+      </div>
     </section>
   </body>
 </html>

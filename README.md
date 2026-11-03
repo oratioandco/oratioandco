@@ -28,23 +28,65 @@ experiments to valuable, usable systems without removing human judgment.
 
 ## Selected work
 
-![Three selected products: the AI Bible Study App, Urban Eclipse, and Waldläufer](assets/readme/selected-work.png)
+### [AI Bible Study App for Bibel TV](https://github.com/oratioandco/ai-bible-study-case-study)
 
-### [AI Bible Study App — Product & System Case Study](https://github.com/oratioandco/ai-bible-study-case-study)
+![AI Bible Study App for Bibel TV](assets/readme/vsb-hero.png)
 
 The product and system story behind an unpublished, source-grounded AI study
-Bible I designed, managed, and built. The public repository documents the mobile
-and web experience, grounded chat, virtual clips, retrieval architecture, and
-agentic content workflows without exposing customer code or production secrets.
-An October 2026 pipeline snapshot contained 11,405 source-linked clips from 3,504
-videos; this is system output, not an adoption claim.
+Bible I designed, managed, and built for Bibel TV. It combines a calm native
+reading experience, grounded conversation, virtual clips, retrieval architecture,
+and agentic content workflows. An October 2026 pipeline snapshot contained 11,405
+source-linked clips from 3,504 videos; this is system output, not an adoption
+claim. The app runs in test builds and has not launched.
+
+### Bibel TV product infrastructure
+
+![Bibel TV Color API, Token API, Storybook component system, and CI checks](assets/readme/systems.png)
+
+I built the infrastructure that lets product teams move quickly without losing
+coherence: a live Color API for context-aware artwork themes; a four-tier token
+system distributed through an API to Android, iOS, web, connected TV, and Figma;
+an LLM-safe Storybook component reference; and six local and CI checks that refuse
+unresolved token references and hardcoded color values.
+
+### [Selah — mindful calendar transitions](https://selah.guide)
+
+![Selah, a shipped macOS menu-bar app](assets/readme/selah.png)
+
+A shipped macOS menu-bar app that turns the gaps between meetings into intentional
+pauses. I designed and agentically engineered the product end to end, including its
+privacy-conscious on-device experience. [View it on the Mac App Store](https://apps.apple.com/us/app/selah-mindful-transitions/id6748382447?mt=12).
+
+### Aperto — spiritual formation companion
+
+![Aperto native mobile app](assets/readme/aperto.png)
+
+An audio-first native companion for people seeking a meaningful daily spiritual
+rhythm. The product combines calm practices, conversational support, Scripture,
+multilingual content, and deliberately human-centered safety boundaries. Aperto is
+in active development for iOS and Android and has not launched.
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
+
+![Urban Eclipse 3D geospatial photography planner](assets/readme/source/urban-eclipse.jpg)
 
 A 3D geospatial planning tool for extreme-telephoto photography. It combines real
 Berlin LoD2 buildings, astronomical calculations, camera geometry, line-of-sight
 analysis, and a tested CityGML-to-3D-Tiles pipeline in a distinctive plaster-model
 interface. [Open the live experience](https://plastervoid-n.2.28.29.90.sslip.io).
+
+### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
+
+<p>
+  <img src="assets/readme/source/waldlaeufer-start.jpg" alt="Waldläufer start screen" width="49%" />
+  <img src="assets/readme/source/waldlaeufer-story.jpg" alt="Waldläufer story screen" width="49%" />
+</p>
+
+An adaptive learning game for children with dyslexia that turns reading practice into
+a navigable 3D forest experience. The product combines learning design, game mechanics,
+and an end-to-end browser implementation.
+
+## Additional open work
 
 ### [Dynamic Identity Configurator](https://github.com/oratioandco/dynamic_identity_configurator)
 
@@ -52,17 +94,15 @@ A generative identity system that turns one architectural form into an extensibl
 family of distinctive posters—connecting brand rules, creative tooling, and a usable
 interactive configurator. [Try the configurator](https://oratioandco.github.io/dynamic_identity_configurator/).
 
-### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
-
-An adaptive learning game for children with dyslexia that turns reading practice into
-a navigable 3D forest experience. The product combines learning design, game mechanics,
-and an end-to-end browser implementation.
-
 ### [Aperto Bible](https://github.com/oratioandco/aperto-bible)
 
 An open, multilingual publishing system exploring how AI-assisted translation can
 remain inspectable and human-governed across languages, structured content, and
 reusable distribution formats.
+
+Faith App Foundation is the shared application foundation I am currently developing
+across the Bible-study and spiritual-formation product tracks. It is not presented as
+a finished product yet.
 
 ## How I work
 
