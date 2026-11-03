@@ -47,7 +47,9 @@ I built the infrastructure that lets product teams move quickly without losing
 coherence: a live Color API for context-aware artwork themes; a four-tier token
 system distributed through an API to Android, iOS, web, connected TV, and Figma;
 an LLM-safe Storybook component reference; and six local and CI checks that refuse
-unresolved token references and hardcoded color values.
+unresolved token references and hardcoded color values. A matching MCP and CLI give
+coding agents the system's real tokens, components, screen decisions, and scaffolds
+instead of asking them to approximate the design language from screenshots.
 
 ### [Selah — mindful calendar transitions](https://selah.guide)
 
@@ -65,6 +67,17 @@ An audio-first native companion for people seeking a meaningful daily spiritual
 rhythm. The product combines calm practices, conversational support, Scripture,
 multilingual content, and deliberately human-centered safety boundaries. Aperto is
 in active development for iOS and Android and has not launched.
+
+### [Missional by Design — open research and practice](https://missional.design)
+
+![Missional by Design](assets/readme/missional.png)
+
+An open, bilingual resource for Christian technologists and ministry leaders,
+combining design principles, a missional canvas, product patterns, and a research
+library for Bible, faith, and AI products. Its public, stateless
+[Bezalel MCP server](https://patterns.missional.design/bezalel/) brings the same
+options, evidence, and questions into Claude, ChatGPT, Cursor, and other compatible
+assistants—while leaving theological, pastoral, and safeguarding judgment to people.
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
