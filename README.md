@@ -91,7 +91,7 @@ in active development for iOS and Android and has not launched.
 
 ### [Missional by Design — open research and practice](https://missional.design)
 
-![Missional by Design](assets/readme/missional.png)
+[![Missional by Design pattern: Progress and streaks](assets/readme/missional.png)](https://missional.design/patterns/progress-and-streaks/)
 
 **Independent open venture · Live in English and German**
 
@@ -106,23 +106,17 @@ assistants—while leaving theological, pastoral, and safeguarding judgment to p
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
-![Urban Eclipse 3D geospatial photography planner](assets/readme/source/urban-eclipse.jpg)
-
 A 3D geospatial planning tool for extreme-telephoto photography. It combines real
 Berlin LoD2 buildings, astronomical calculations, camera geometry, line-of-sight
-analysis, and a tested CityGML-to-3D-Tiles pipeline in a distinctive plaster-model
-interface. [Open the live experience](https://plastervoid-n.2.28.29.90.sslip.io).
+analysis, and a tested CityGML-to-3D-Tiles pipeline. The visual direction is still
+evolving; the public repository documents the working geometry and planning system.
 
 ### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
 
-<p>
-  <img src="assets/readme/source/waldlaeufer-start.jpg" alt="Waldläufer start screen" width="49%" />
-  <img src="assets/readme/source/waldlaeufer-story.jpg" alt="Waldläufer story screen" width="49%" />
-</p>
-
 An adaptive learning game for children with dyslexia that turns reading practice into
 a navigable 3D forest experience. The product combines learning design, game mechanics,
-and an end-to-end browser implementation.
+an adaptive practice engine, and an end-to-end browser implementation. The working
+prototype is designed for iPad Safari and keeps learning data on the device.
 
 ### [Dynamic Identity Configurator](https://github.com/oratioandco/dynamic_identity_configurator)
 

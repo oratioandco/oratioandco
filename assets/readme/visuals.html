@@ -367,15 +367,14 @@
       }
 
       #systems {
-        padding: 26px;
+        padding: 24px;
         background: var(--ink);
       }
       #systems .systems-grid {
-        height: 708px;
+        height: 712px;
         display: grid;
-        grid-template-columns: 1.1fr .9fr;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 14px;
+        grid-template-columns: 1.18fr .82fr;
+        gap: 16px;
       }
       #systems figure {
         position: relative;
@@ -383,12 +382,9 @@
         overflow: hidden;
         background: var(--white);
       }
-      #systems figure:first-child { grid-row: 1 / 4; }
+      #systems figure:first-child { background: #090d13; }
       #systems img { width: 100%; height: 100%; object-fit: cover; }
-      #systems figure:first-child img { object-position: center 37%; }
-      #systems figure:nth-child(2) img { object-position: center; }
-      #systems figure:nth-child(3) img { object-position: center top; }
-      #systems figure:nth-child(4) img { object-position: left center; }
+      #systems figure:first-child img { object-position: 58% center; }
       #systems figcaption {
         position: absolute;
         left: 16px;
@@ -396,9 +392,65 @@
         padding: 8px 10px;
         color: var(--ink);
         background: var(--acid);
-        font-size: 12px;
+        font-size: 15px;
       }
-      #systems .frame-label { color: var(--ink); background: var(--signal); }
+      #systems .system-map {
+        padding: 48px 40px 34px;
+        color: var(--ink);
+        background: var(--paper);
+        display: flex;
+        flex-direction: column;
+      }
+      #systems .system-map h2 {
+        margin: 0;
+        max-width: 450px;
+        font-family: Gambarino, Georgia, serif;
+        font-size: 58px;
+        font-weight: 400;
+        line-height: .96;
+        letter-spacing: -.04em;
+      }
+      #systems .system-map > p {
+        margin: 24px 0 36px;
+        max-width: 420px;
+        color: var(--muted);
+        font-size: 19px;
+        line-height: 1.4;
+      }
+      #systems .rail {
+        padding: 18px 0 20px;
+        border-top: 1px solid var(--line);
+      }
+      #systems .rail strong {
+        display: block;
+        margin-bottom: 14px;
+        font-size: 22px;
+      }
+      #systems .rail-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7px;
+      }
+      #systems .rail-row span {
+        padding: 7px 9px;
+        border: 1px solid var(--line);
+        background: var(--white);
+        font-size: 14px;
+      }
+      #systems .rail-row b {
+        color: var(--signal);
+        font-size: 20px;
+        font-weight: 500;
+      }
+      #systems .guardrail {
+        margin-top: auto;
+        padding: 14px 16px;
+        color: var(--ink);
+        background: var(--acid);
+        font-size: 15px;
+      }
+      #systems .frame-label { z-index: 20; color: var(--ink); background: var(--signal); font-size: 14px; }
 
       #selah { background: #ede8df; }
       #selah .shot {
@@ -541,21 +593,26 @@
       <span class="frame-label mono">Bibel TV · product infrastructure</span>
       <div class="systems-grid">
         <figure>
-          <img src="source/bibeltv-color-system.png" alt="" />
-          <figcaption class="mono">Color API · context-aware themes</figcaption>
+          <img src="source/bibeltv-color-lab.png" alt="" />
+          <figcaption class="mono">Color API · one artwork, two usable themes</figcaption>
         </figure>
-        <figure>
-          <img src="source/bibeltv-token-api.png" alt="" />
-          <figcaption class="mono">Token API · five product surfaces</figcaption>
-        </figure>
-        <figure>
-          <img src="source/bibeltv-storybook.png" alt="" />
-          <figcaption class="mono">Storybook · LLM-safe components</figcaption>
-        </figure>
-        <figure>
-          <img src="source/bibeltv-ci-check.png" alt="" />
-          <figcaption class="mono">MCP + CLI + CI · one governed system</figcaption>
-        </figure>
+        <div class="system-map">
+          <h2>One governed design language.</h2>
+          <p>Live product decisions flow into every surface—and into the tools coding agents use.</p>
+          <div class="rail">
+            <strong>Token API</strong>
+            <div class="rail-row mono">
+              <span>Android</span><span>iOS</span><span>Web</span><span>TV</span><span>Figma</span>
+            </div>
+          </div>
+          <div class="rail">
+            <strong>LLM-safe Storybook</strong>
+            <div class="rail-row mono">
+              <span>Components</span><b>→</b><span>MCP</span><span>CLI</span><b>→</b><span>CI</span>
+            </div>
+          </div>
+          <div class="guardrail mono">6 automated checks refuse unresolved tokens and hardcoded color values</div>
+        </div>
       </div>
     </section>
 
