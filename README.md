@@ -8,6 +8,10 @@ I turn complex workflows into useful AI-native products—and help teams adopt t
 practices to build them. My work combines product strategy, human-centered design,
 facilitation, and agentic engineering.
 
+The common thread is deployment: find the actual bottleneck, connect the systems and
+data around it, make the result usable, and leave behind a workflow that people can
+understand and operate.
+
 Based in Berlin. I work with product organizations that need to move from AI
 experiments to valuable, usable systems without removing human judgment.
 
@@ -30,6 +34,16 @@ deliberate early-stage experiments.
 - **Team practices for agentic delivery**—from working prototypes and MCP-enabled
   environments to shared guidelines and responsible adoption.
 
+## How I work in the field
+
+1. **Find the leverage.** I work backward from the operator, the workflow, and the
+   economic or mission value—not from a model demo.
+2. **Build across boundaries.** I move between product framing, interfaces, APIs,
+   data pipelines, agents, design systems, and deployment until the complete path
+   works.
+3. **Earn trust.** I make sources, uncertainty, review points, and human control
+   visible, then help the people doing the work shape and adopt the system.
+
 ## Client and organization work
 
 ### [AI Bible Study App for Bibel TV](https://github.com/oratioandco/ai-bible-study-case-study)
@@ -38,12 +52,15 @@ deliberate early-stage experiments.
 
 **Bibel TV · Product leadership, design, and implementation · Test builds**
 
-The product and system story behind an unpublished, source-grounded AI study
-Bible I designed, managed, and built for Bibel TV. It combines a calm native
-reading experience, grounded conversation, virtual clips, retrieval architecture,
-and agentic content workflows. An October 2026 pipeline snapshot contained 11,405
-source-linked clips from 3,504 videos; this is system output, not an adoption
-claim. The app runs in test builds and has not launched.
+The product and system story behind an unpublished, source-grounded AI study Bible
+I designed, managed, and built for Bibel TV. The operational bottleneck was not a
+missing chatbot; it was making a large long-form video catalog useful at the moment
+someone reads a passage or asks a question. The resulting system connects native
+reading, grounded conversation, retrieval, and source-linked virtual clips to a
+nightly catalog sync and a continuously running content workflow. An October 2026
+pipeline snapshot contained 11,405 source-linked clips from 3,504 videos; this is
+system output, not an adoption claim. The app runs in test builds and has not
+launched.
 
 ### Bibel TV product infrastructure
 
@@ -57,7 +74,9 @@ system distributed through an API to Android, iOS, web, connected TV, and Figma;
 an LLM-safe Storybook component reference; and six local and CI checks that refuse
 unresolved token references and hardcoded color values. A matching MCP and CLI give
 coding agents the system's real tokens, components, screen decisions, and scaffolds
-instead of asking them to approximate the design language from screenshots.
+instead of asking them to approximate the design language from screenshots. This
+turns agentic delivery from isolated prompting into a governed workflow the product
+team can actually share.
 
 ### Earlier organization work
 
@@ -75,8 +94,10 @@ at [treppmann.design](https://treppmann.design).
 **Independent product · Shipped on the Mac App Store**
 
 A shipped macOS menu-bar app that turns the gaps between meetings into intentional
-pauses. I designed and agentically engineered the product end to end, including its
-privacy-conscious on-device experience. [View it on the Mac App Store](https://apps.apple.com/us/app/selah-mindful-transitions/id6748382447?mt=12).
+pauses. I designed and agentically engineered the product end to end, integrating
+EventKit calendars, system notifications, meeting-link detection, breathing and
+reflection flows, and privacy-conscious local storage into the rhythms of an
+existing workday. [View it on the Mac App Store](https://apps.apple.com/us/app/selah-mindful-transitions/id6748382447?mt=12).
 
 ### Aperto — spiritual formation companion
 
@@ -100,7 +121,9 @@ combining design principles, a missional canvas, product patterns, and a researc
 library for Bible, faith, and AI products. Its public, stateless
 [Bezalel MCP server](https://patterns.missional.design/bezalel/) brings the same
 options, evidence, and questions into Claude, ChatGPT, Cursor, and other compatible
-assistants—while leaving theological, pastoral, and safeguarding judgment to people.
+assistants. It is a practical example of putting domain research inside the tools
+where decisions happen while leaving theological, pastoral, and safeguarding
+judgment to people.
 
 ## Product experiments and open work
 
@@ -108,30 +131,37 @@ assistants—while leaving theological, pastoral, and safeguarding judgment to p
 
 ![Urban Eclipse planning a telephoto alignment between the sun and Berlin's Fernsehturm](assets/readme/source/urban-eclipse.jpg)
 
-A 3D geospatial planning tool for extreme-telephoto photography. It combines real
-Berlin LoD2 buildings, astronomical calculations, camera geometry, line-of-sight
-analysis, and a tested CityGML-to-3D-Tiles pipeline in a distinctive atmospheric
-planning interface. The public prototype turns a surveyed viewpoint, real celestial
-geometry, and a chosen lens into an inspectable city-scale composition.
+A 3D geospatial planning tool for extreme-telephoto photography. The polished scene
+sits on top of decidedly unpolished source material: official CityGML, coordinate and
+height-datum conversion, non-convex building geometry, camera math, ephemeris data,
+and line-of-sight checks. I turned that data path into a tested CityGML-to-3D-Tiles
+pipeline and a deployed planning instrument with a top-down route view and an
+inspectable camera composition.
 
 ### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
 
 An adaptive learning game for children with dyslexia that turns reading practice into
 a navigable 3D forest experience. The product combines learning design, game mechanics,
-an adaptive practice engine, and an end-to-end browser implementation. The working
-prototype is designed for iPad Safari and keeps learning data on the device.
+an adaptive practice engine, and an end-to-end browser implementation. It translates
+specialist learning principles into moment-to-moment scaffolding, parent or therapist
+reporting, and a working iPad Safari experience while keeping learning data on the
+device.
 
 ### [Dynamic Identity Configurator](https://github.com/oratioandco/dynamic_identity_configurator)
 
 A generative identity system that turns one architectural form into an extensible
-family of distinctive posters—connecting brand rules, creative tooling, and a usable
-interactive configurator. [Try the configurator](https://oratioandco.github.io/dynamic_identity_configurator/).
+family of distinctive posters. It productizes a recurring creative-production
+workflow: brand constraints become parameters, variations become reproducible, and
+non-designers can make new material through a usable interactive configurator.
+[Try the configurator](https://oratioandco.github.io/dynamic_identity_configurator/).
 
 ### [Aperto Bible](https://github.com/oratioandco/aperto-bible)
 
 An open, multilingual publishing system exploring how AI-assisted translation can
 remain inspectable and human-governed across languages, structured content, and
-reusable distribution formats.
+reusable distribution formats. Its value is the workflow around the model: stable
+source structure, reviewable changes, provenance, and outputs that can be reused
+without hiding how they were produced.
 
 Faith App Foundation is the shared application foundation I am currently developing
 across the Bible-study and spiritual-formation product tracks. It is not presented as
