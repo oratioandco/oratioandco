@@ -106,10 +106,13 @@ assistants—while leaving theological, pastoral, and safeguarding judgment to p
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
+![Urban Eclipse planning a telephoto alignment between the sun and Berlin's Fernsehturm](assets/readme/source/urban-eclipse.jpg)
+
 A 3D geospatial planning tool for extreme-telephoto photography. It combines real
 Berlin LoD2 buildings, astronomical calculations, camera geometry, line-of-sight
-analysis, and a tested CityGML-to-3D-Tiles pipeline. The visual direction is still
-evolving; the public repository documents the working geometry and planning system.
+analysis, and a tested CityGML-to-3D-Tiles pipeline in a distinctive atmospheric
+planning interface. The public prototype turns a surveyed viewpoint, real celestial
+geometry, and a chosen lens into an inspectable city-scale composition.
 
 ### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
 
