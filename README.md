@@ -11,6 +11,10 @@ facilitation, and agentic engineering.
 Based in Berlin. I work with product organizations that need to move from AI
 experiments to valuable, usable systems without removing human judgment.
 
+My work spans product leadership inside organizations, focused client engagements,
+and independent ventures—from production infrastructure and shipped products to
+deliberate early-stage experiments.
+
 [AI leadership & transformation](https://treppmann.de) ·
 [Product design portfolio](https://treppmann.design) ·
 [LinkedIn](https://www.linkedin.com/in/tobiastreppmann/) ·
@@ -26,11 +30,13 @@ experiments to valuable, usable systems without removing human judgment.
 - **Team practices for agentic delivery**—from working prototypes and MCP-enabled
   environments to shared guidelines and responsible adoption.
 
-## Selected work
+## Client and organization work
 
 ### [AI Bible Study App for Bibel TV](https://github.com/oratioandco/ai-bible-study-case-study)
 
 ![AI Bible Study App for Bibel TV](assets/readme/vsb-hero.png)
+
+**Bibel TV · Product leadership, design, and implementation · Test builds**
 
 The product and system story behind an unpublished, source-grounded AI study
 Bible I designed, managed, and built for Bibel TV. It combines a calm native
@@ -43,6 +49,8 @@ claim. The app runs in test builds and has not launched.
 
 ![Bibel TV Color API, Token API, Storybook component system, and CI checks](assets/readme/systems.png)
 
+**Bibel TV · Production infrastructure across product surfaces**
+
 I built the infrastructure that lets product teams move quickly without losing
 coherence: a live Color API for context-aware artwork themes; a four-tier token
 system distributed through an API to Android, iOS, web, connected TV, and Figma;
@@ -51,9 +59,20 @@ unresolved token references and hardcoded color values. A matching MCP and CLI g
 coding agents the system's real tokens, components, screen decisions, and scaffolds
 instead of asking them to approximate the design language from screenshots.
 
+### Earlier organization work
+
+Earlier roles and engagements span Ninox, Datameer, ChurchDesk, and Hypoport Hub SE—
+across B2B SaaS, enterprise analytics, workflow productization, design-system
+governance, and organizational change. The fuller case-study portfolio is available
+at [treppmann.design](https://treppmann.design).
+
+## Independent products and ventures
+
 ### [Selah — mindful calendar transitions](https://selah.guide)
 
 ![Selah, a shipped macOS menu-bar app](assets/readme/selah.png)
+
+**Independent product · Shipped on the Mac App Store**
 
 A shipped macOS menu-bar app that turns the gaps between meetings into intentional
 pauses. I designed and agentically engineered the product end to end, including its
@@ -62,6 +81,8 @@ privacy-conscious on-device experience. [View it on the Mac App Store](https://a
 ### Aperto — spiritual formation companion
 
 ![Aperto native mobile app](assets/readme/aperto.png)
+
+**Independent venture · In active development for iOS and Android**
 
 An audio-first native companion for people seeking a meaningful daily spiritual
 rhythm. The product combines calm practices, conversational support, Scripture,
@@ -72,12 +93,16 @@ in active development for iOS and Android and has not launched.
 
 ![Missional by Design](assets/readme/missional.png)
 
+**Independent open venture · Live in English and German**
+
 An open, bilingual resource for Christian technologists and ministry leaders,
 combining design principles, a missional canvas, product patterns, and a research
 library for Bible, faith, and AI products. Its public, stateless
 [Bezalel MCP server](https://patterns.missional.design/bezalel/) brings the same
 options, evidence, and questions into Claude, ChatGPT, Cursor, and other compatible
 assistants—while leaving theological, pastoral, and safeguarding judgment to people.
+
+## Product experiments and open work
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
@@ -98,8 +123,6 @@ interface. [Open the live experience](https://plastervoid-n.2.28.29.90.sslip.io)
 An adaptive learning game for children with dyslexia that turns reading practice into
 a navigable 3D forest experience. The product combines learning design, game mechanics,
 and an end-to-end browser implementation.
-
-## Additional open work
 
 ### [Dynamic Identity Configurator](https://github.com/oratioandco/dynamic_identity_configurator)
 
