@@ -1,3 +1,5 @@
+![Tobias Treppmann — AI product and transformation leader, product designer, and agentic builder](assets/readme/profile-hero.png)
+
 # Tobias Treppmann
 
 **AI Product & Transformation Leader · Product Designer · Agentic Builder**
@@ -25,6 +27,8 @@ experiments to valuable, usable systems without removing human judgment.
   environments to shared guidelines and responsible adoption.
 
 ## Selected work
+
+![Three selected products: the AI Bible Study App, Urban Eclipse, and Waldläufer](assets/readme/selected-work.png)
 
 ### [AI Bible Study App — Product & System Case Study](https://github.com/oratioandco/ai-bible-study-case-study)
 

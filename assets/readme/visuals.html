@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub README visuals</title>
+    <style>
+      @font-face {
+        font-family: Switzer;
+        src: url("fonts/Switzer-Variable.woff") format("woff");
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: Gambarino;
+        src: url("fonts/Gambarino-Regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: Departure Mono;
+        src: url("fonts/DepartureMono-Regular.woff2") format("woff2");
+      }
+      :root {
+        --ink: #11110f;
+        --paper: #f3f0e8;
+        --white: #fffdf7;
+        --signal: #ff6138;
+        --acid: #d7ff3f;
+        --muted: #68675f;
+        --line: rgba(17, 17, 15, 0.22);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--ink); }
+      body { font-family: Switzer, Arial, sans-serif; }
+      .frame { display: none; overflow: hidden; }
+      html[data-frame="profile"] #profile,
+      html[data-frame="work"] #work,
+      html[data-frame="vsb"] #vsb { display: block; }
+      .mono {
+        font-family: "Departure Mono", monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      #profile {
+        width: 1400px;
+        height: 560px;
+        position: relative;
+        color: var(--white);
+        background: var(--ink);
+      }
+      #profile .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+        background-size: 175px 140px;
+      }
+      #profile .copy {
+        position: absolute;
+        z-index: 2;
+        inset: 54px auto 54px 64px;
+        width: 880px;
+        display: flex;
+        flex-direction: column;
+      }
+      #profile .eyebrow {
+        color: var(--acid);
+        font-size: 16px;
+      }
+      #profile h1 {
+        margin: 55px 0 0;
+        max-width: 850px;
+        font-size: 79px;
+        font-weight: 520;
+        line-height: 0.98;
+        letter-spacing: -0.058em;
+      }
+      #profile h1 em {
+        font-family: Gambarino, Georgia, serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      #profile .identity {
+        margin-top: auto;
+        display: flex;
+        align-items: baseline;
+        gap: 26px;
+      }
+      #profile .identity strong { font-size: 24px; font-weight: 650; }
+      #profile .identity span { color: rgba(255,253,247,.6); font-size: 15px; }
+      #profile .portrait-block {
+        position: absolute;
+        z-index: 1;
+        top: 38px;
+        right: 56px;
+        width: 350px;
+        height: 484px;
+        background: var(--signal);
+      }
+      #profile .portrait-block::before {
+        content: "";
+        position: absolute;
+        width: 112px;
+        height: 112px;
+        border-radius: 999px;
+        background: var(--acid);
+        top: -15px;
+        right: -17px;
+      }
+      #profile .portrait-block img {
+        position: absolute;
+        inset: 18px 18px 0 auto;
+        width: 350px;
+        height: 466px;
+        object-fit: cover;
+        object-position: center top;
+        filter: grayscale(1) contrast(1.08);
+        mix-blend-mode: multiply;
+      }
+      #profile .side-label {
+        position: absolute;
+        right: 24px;
+        bottom: 23px;
+        color: var(--ink);
+        font-size: 12px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+      }
+
+      #work {
+        width: 1400px;
+        height: 760px;
+        padding: 55px 60px 60px;
+        color: var(--ink);
+        background: var(--paper);
+      }
+      #work header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+      }
+      #work h2 {
+        margin: 0;
+        font-family: Gambarino, Georgia, serif;
+        font-size: 58px;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+      #work header .mono { color: var(--muted); font-size: 13px; }
+      .project-grid {
+        height: 560px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        padding-top: 25px;
+      }
+      .project {
+        min-width: 0;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+      .project .num {
+        position: absolute;
+        z-index: 3;
+        top: 18px;
+        left: 18px;
+        padding: 7px 9px;
+        color: var(--white);
+        background: var(--ink);
+        font-size: 12px;
+      }
+      .project-copy {
+        position: absolute;
+        z-index: 3;
+        left: 22px;
+        right: 22px;
+        bottom: 20px;
+      }
+      .project h3 {
+        margin: 0;
+        font-size: 39px;
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        font-weight: 600;
+      }
+      .project p {
+        margin: 11px 0 0;
+        font-size: 15px;
+        line-height: 1.35;
+      }
+      .project-vsb { background: var(--ink); color: var(--white); }
+      .project-vsb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 30%, rgba(17,17,15,.96) 75%);
+      }
+      .project-vsb img {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+        object-position: 48% 28%;
+      }
+      .project-vsb .metric {
+        color: var(--acid);
+        font-family: "Departure Mono", monospace;
+        font-size: 13px;
+      }
+      .project-urban { background: var(--ink); color: var(--white); }
+      .project-urban img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .project-urban::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(17,17,15,.08), rgba(17,17,15,.92));
+      }
+      .project-wald { background: #e8eadf; }
+      .project-wald .shots {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+        padding: 12px;
+        height: 350px;
+        transform: rotate(-1.5deg);
+      }
+      .project-wald img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        box-shadow: 0 14px 28px rgba(17,17,15,.2);
+      }
+      .project-wald .num { background: var(--signal); color: var(--ink); }
+
+      #vsb {
+        width: 1400px;
+        height: 620px;
+        position: relative;
+        color: var(--white);
+        background: var(--ink);
+      }
+      #vsb .rule {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+        background-size: 175px 100%;
+      }
+      #vsb .copy {
+        position: absolute;
+        z-index: 2;
+        top: 56px;
+        left: 62px;
+        width: 620px;
+      }
+      #vsb .eyebrow { color: var(--acid); font-size: 14px; }
+      #vsb h1 {
+        margin: 55px 0 0;
+        max-width: 570px;
+        font-family: Gambarino, Georgia, serif;
+        font-size: 77px;
+        font-weight: 400;
+        line-height: .97;
+        letter-spacing: -0.045em;
+      }
+      #vsb .sub {
+        width: 545px;
+        margin-top: 28px;
+        color: rgba(255,253,247,.7);
+        font-size: 20px;
+        line-height: 1.38;
+      }
+      #vsb .proof {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 550px;
+        margin-top: 34px;
+        border-top: 1px solid rgba(255,255,255,.22);
+      }
+      #vsb .proof div { padding-top: 17px; }
+      #vsb .proof strong { display: block; color: var(--signal); font-size: 31px; }
+      #vsb .proof span { color: rgba(255,253,247,.58); font-size: 13px; }
+      #vsb .device {
+        position: absolute;
+        z-index: 2;
+        top: 47px;
+        right: 53px;
+        width: 615px;
+        height: 526px;
+        padding: 15px;
+        background: var(--paper);
+        box-shadow: -20px 24px 0 var(--signal);
+        transform: rotate(1.2deg);
+      }
+      #vsb .device img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      #vsb .status {
+        position: absolute;
+        z-index: 3;
+        right: 55px;
+        bottom: 18px;
+        padding: 8px 11px;
+        color: var(--ink);
+        background: var(--acid);
+        font-size: 12px;
+      }
+    </style>
+    <script>
+      document.documentElement.dataset.frame = new URLSearchParams(location.search).get("frame") || "profile";
+    </script>
+  </head>
+  <body>
+    <section class="frame" id="profile">
+      <div class="grid"></div>
+      <div class="copy">
+        <div class="eyebrow mono">AI product · transformation · design engineering</div>
+        <h1><em>Human judgment</em> for products built with agents.</h1>
+        <div class="identity">
+          <strong>Tobias Treppmann</strong>
+          <span class="mono">Berlin · treppmann.de</span>
+        </div>
+      </div>
+      <div class="portrait-block">
+        <img src="source/tobias-halftone.webp" alt="" />
+        <span class="side-label mono">Product strategy → working systems</span>
+      </div>
+    </section>
+
+    <section class="frame" id="work">
+      <header>
+        <h2>Selected work</h2>
+        <span class="mono">Product thinking · interaction · implementation</span>
+      </header>
+      <div class="project-grid">
+        <article class="project project-vsb">
+          <span class="num mono">01 · AI product</span>
+          <img src="source/vsb-sermon-clips.jpg" alt="" />
+          <div class="project-copy">
+            <h3>AI Bible Study App</h3>
+            <p class="metric">11,405 source-linked clips · Oct 2026</p>
+          </div>
+        </article>
+        <article class="project project-urban">
+          <span class="num mono">02 · Design engineering</span>
+          <img src="source/urban-eclipse.jpg" alt="" />
+          <div class="project-copy">
+            <h3>Urban Eclipse</h3>
+            <p>Real geometry, optics, astronomy, and a working 3D scene.</p>
+          </div>
+        </article>
+        <article class="project project-wald">
+          <span class="num mono">03 · Learning product</span>
+          <div class="shots">
+            <img src="source/waldlaeufer-start.jpg" alt="" />
+            <img src="source/waldlaeufer-story.jpg" alt="" />
+          </div>
+          <div class="project-copy">
+            <h3>Waldläufer</h3>
+            <p>Adaptive reading practice inside a touch-first 3D adventure.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="frame" id="vsb">
+      <div class="rule"></div>
+      <div class="copy">
+        <div class="eyebrow mono">AI product & system case study</div>
+        <h1>A study Bible built around source-linked video.</h1>
+        <p class="sub">Passage-centered reading, grounded conversation, and an active content pipeline shaped as one product.</p>
+        <div class="proof">
+          <div><strong>11,405</strong><span>source-linked clips</span></div>
+          <div><strong>3,504</strong><span>videos · October 2026</span></div>
+        </div>
+      </div>
+      <div class="device"><img src="source/vsb-sermon-clips.jpg" alt="" /></div>
+      <div class="status mono">Unpublished product · verified system output</div>
+    </section>
+  </body>
+</html>
