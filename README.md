@@ -16,8 +16,8 @@ Based in Berlin. I work with product organizations that need to move from AI
 experiments to valuable, usable systems without removing human judgment.
 
 My work spans product leadership inside organizations, focused client engagements,
-and independent ventures—from production infrastructure and shipped products to
-deliberate early-stage experiments.
+and independent ventures—from product strategy and research to production
+infrastructure and shipped software.
 
 [AI leadership & transformation](https://treppmann.de) ·
 [Product design portfolio](https://treppmann.design) ·
@@ -48,19 +48,17 @@ deliberate early-stage experiments.
 
 ### [AI Bible Study App for Bibel TV](https://github.com/oratioandco/ai-bible-study-case-study)
 
-![AI Bible Study App for Bibel TV](assets/readme/vsb-hero.png)
+![AI Bible Study App for Bibel TV — swipe between Bible reading and grounded conversation](assets/readme/vsb-swipe.gif)
 
-**Bibel TV · Product leadership, design, and implementation · Test builds**
+**Bibel TV · AI product leadership, design, and implementation**
 
-The product and system story behind an unpublished, source-grounded AI study Bible
-I designed, managed, and built for Bibel TV. The operational bottleneck was not a
-missing chatbot; it was making a large long-form video catalog useful at the moment
-someone reads a passage or asks a question. The resulting system connects native
-reading, grounded conversation, retrieval, and source-linked virtual clips to a
-nightly catalog sync and a continuously running content workflow. An October 2026
-pipeline snapshot contained 11,405 source-linked clips from 3,504 videos; this is
-system output, not an adoption claim. The app runs in test builds and has not
-launched.
+A source-grounded AI study Bible I designed, managed, and built for Bibel TV. The
+operational bottleneck was not a missing chatbot; it was making a large long-form
+video catalog useful at the moment someone reads a passage or asks a question. The
+resulting system connects native reading, grounded conversation, retrieval, and
+source-linked virtual clips to a nightly catalog sync and a continuously running
+content workflow. By October 2026, the pipeline contained 11,405 source-linked clips
+from 3,504 videos.
 
 ### Bibel TV product infrastructure
 
@@ -103,12 +101,13 @@ existing workday. [View it on the Mac App Store](https://apps.apple.com/us/app/s
 
 ![Aperto native mobile app](assets/readme/aperto.png)
 
-**Independent venture · In active development for iOS and Android**
+**Independent venture · Native product for iOS and Android**
 
 An audio-first native companion for people seeking a meaningful daily spiritual
 rhythm. The product combines calm practices, conversational support, Scripture,
-multilingual content, and deliberately human-centered safety boundaries. Aperto is
-in active development for iOS and Android and has not launched.
+multilingual content, and deliberately human-centered safety boundaries. Its
+personalization system learns over time while keeping the daily practice calm,
+legible, and under the person's control.
 
 ### [Missional by Design — open research and practice](https://missional.design)
 
@@ -125,18 +124,17 @@ assistants. It is a practical example of putting domain research inside the tool
 where decisions happen while leaving theological, pastoral, and safeguarding
 judgment to people.
 
-## Product experiments and open work
+## Selected products and systems
 
 ### [Urban Eclipse](https://github.com/oratioandco/urbaneclipse)
 
 ![Urban Eclipse planning a telephoto alignment between the sun and Berlin's Fernsehturm](assets/readme/source/urban-eclipse.jpg)
 
-A 3D geospatial planning tool for extreme-telephoto photography. The polished scene
-sits on top of decidedly unpolished source material: official CityGML, coordinate and
-height-datum conversion, non-convex building geometry, camera math, ephemeris data,
-and line-of-sight checks. I turned that data path into a tested CityGML-to-3D-Tiles
-pipeline and a deployed planning instrument with a top-down route view and an
-inspectable camera composition.
+A 3D geospatial planning tool for extreme-telephoto photography. It turns official
+CityGML, coordinate and height-datum conversion, non-convex building geometry,
+camera math, ephemeris data, and line-of-sight checks into a tested
+CityGML-to-3D-Tiles pipeline and a deployed planning instrument with a top-down route
+view and an inspectable camera composition.
 
 ### [Waldläufer](https://github.com/oratioandco/waldlaeufer)
 
@@ -163,9 +161,10 @@ reusable distribution formats. Its value is the workflow around the model: stabl
 source structure, reviewable changes, provenance, and outputs that can be reused
 without hiding how they were produced.
 
-Faith App Foundation is the shared application foundation I am currently developing
-across the Bible-study and spiritual-formation product tracks. It is not presented as
-a finished product yet.
+Faith App Foundation is the shared product platform I am building for the Bible-study
+and spiritual-formation tracks: reusable content, conversation, safety, media, and
+personalization capabilities designed to let distinct products share infrastructure
+without collapsing into the same experience.
 
 ## How I work
 
