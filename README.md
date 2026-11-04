@@ -48,7 +48,7 @@ infrastructure and shipped software.
 
 ### [AI Bible Study App for Bibel TV](https://github.com/oratioandco/ai-bible-study-case-study)
 
-![AI Bible Study App for Bibel TV — swipe between Bible reading and grounded conversation](assets/readme/vsb-swipe.gif)
+![AI Bible Study App for Bibel TV: swipe from grounded conversation to the Bible, then open a sermon clip](assets/readme/vsb-swipe.gif)
 
 **Bibel TV · AI product leadership, design, and implementation**
 
